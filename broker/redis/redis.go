@@ -3,6 +3,9 @@ package nats
 import (
 	"encoding/json"
 	"errors"
+	"net/url"
+	"regexp"
+	"strconv"
 	"strings"
 	"sync"
 	"time"
@@ -17,6 +20,8 @@ const (
 	// TaskEventChannel for task event pubsub
 	TaskEventChannel string = "gocelerytaskevent"
 )
+
+var pathDBRegexp = regexp.MustCompile(`/(\d*)\z`)
 
 // Broker implements Nats broker
 type Broker struct {
@@ -73,6 +78,25 @@ func (b *Broker) dial() (redis.Conn, error) {
 	if err != nil {
 		return nil, err
 	}
+
+	u, err := url.Parse(b.redisURL)
+	if err != nil {
+		return nil, err
+	}
+
+	match := pathDBRegexp.FindStringSubmatch(u.Path)
+	if len(match) == 2 {
+		db := 0
+		if len(match[1]) > 0 {
+			db, _ = strconv.Atoi(match[1])
+
+		}
+		log.Debug("Select db=", db)
+		if _, err := c.Do("SELECT", db); err != nil {
+
+		}
+	}
+
 	return c, err
 }
 
