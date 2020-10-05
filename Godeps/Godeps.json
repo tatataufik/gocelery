@@ -17,7 +17,7 @@
 			"Rev": "535138d7bcd717d6531c701ef5933d98b1866257"
 		},
 		{
-			"ImportPath": "github.com/garyburd/redigo/redis",
+			"ImportPath": "github.com/gomodule/redigo/redis",
 			"Rev": "535138d7bcd717d6531c701ef5933d98b1866257"
 		},
 		{

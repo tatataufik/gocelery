@@ -3,16 +3,14 @@ package nats
 import (
 	"encoding/json"
 	"errors"
-	"strconv"
 	"strings"
 	"sync"
 	"time"
 
 	log "github.com/Sirupsen/logrus"
+	"github.com/gomodule/redigo/redis"
 	"github.com/tatataufik/gocelery/broker"
-
 	// redis broker
-	"github.com/garyburd/redigo/redis"
 )
 
 const (
@@ -41,18 +39,8 @@ func (b *Broker) Connect(uri string) error {
 	if len(s) < 2 || s[1] == "" {
 		return errors.New("Invalid redis URL")
 	}
-	ss := strings.Split(s[1], "/")
-	b.redisURL = ss[0]
-	log.Debugf("Dialing [%s]", b.redisURL)
 
-	dbidx := 0
-	if len(ss) > 1 {
-		dbidx, _ = strconv.Atoi(ss[1])
-	}
-	log.Debugf("dial database %d", dbidx)
-	dc := redis.DialDatabase(dbidx)
-	// validate the url first
-	conn, err := redis.Dial("tcp", b.redisURL, dc)
+	conn, err := redis.DialURL(uri)
 	defer conn.Close()
 	if err != nil {
 		return err
