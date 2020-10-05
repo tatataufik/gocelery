@@ -49,6 +49,7 @@ func (b *Broker) Connect(uri string) error {
 	if len(ss) > 1 {
 		dbidx, _ = strconv.Atoi(ss[1])
 	}
+	log.Debugf("dial database %d", dbidx)
 	dc := redis.DialDatabase(dbidx)
 	// validate the url first
 	conn, err := redis.Dial("tcp", b.redisURL, dc)
