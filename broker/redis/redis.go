@@ -40,6 +40,7 @@ func (b *Broker) Connect(uri string) error {
 		return errors.New("Invalid redis URL")
 	}
 
+	b.redisURL = uri
 	conn, err := redis.DialURL(uri)
 	defer conn.Close()
 	if err != nil {
@@ -68,7 +69,7 @@ func (b *Broker) Close() error {
 }
 
 func (b *Broker) dial() (redis.Conn, error) {
-	c, err := redis.Dial("tcp", b.redisURL)
+	c, err := redis.DialURL(b.redisURL)
 	if err != nil {
 		return nil, err
 	}
