@@ -12,8 +12,8 @@ import (
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/go-errors/errors"
-	"github.com/taoh/gocelery/broker"
-	"github.com/taoh/gocelery/serializer"
+	"github.com/tatataufik/gocelery/broker"
+	"github.com/tatataufik/gocelery/serializer"
 )
 
 // WorkerManager starts and stop worker jobs

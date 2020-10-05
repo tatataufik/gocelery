@@ -4,7 +4,7 @@ package main
 
 import (
 	log "github.com/Sirupsen/logrus"
-	"github.com/taoh/gocelery"
+	"github.com/tatataufik/gocelery"
 )
 
 func main() {

@@ -10,11 +10,11 @@ import (
 	"github.com/robfig/cron"
 
 	// import nats broker
-	_ "github.com/taoh/gocelery/broker/nats"
+	_ "github.com/tatataufik/gocelery/broker/nats"
 	// import rabbitmq broker
-	_ "github.com/taoh/gocelery/broker/rabbitmq"
+	_ "github.com/tatataufik/gocelery/broker/rabbitmq"
 	// import redis broker
-	_ "github.com/taoh/gocelery/broker/redis"
+	_ "github.com/tatataufik/gocelery/broker/redis"
 	"github.com/twinj/uuid"
 )
 

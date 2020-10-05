@@ -4,7 +4,7 @@ import (
 	"sync"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/taoh/gocelery/broker"
+	"github.com/tatataufik/gocelery/broker"
 
 	// nats broker
 	"github.com/apcera/nats"

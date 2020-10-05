@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/taoh/gocelery"
+	"github.com/tatataufik/gocelery"
 )
 
 // Adder worker
