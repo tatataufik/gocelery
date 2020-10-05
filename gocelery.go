@@ -130,10 +130,11 @@ func (gocelery *GoCelery) Enqueue(taskName string, args []interface{}, ignoreRes
 // EnqueueInQueueWithSchedule adds a task that is scheduled repeatedly.
 // Schedule is specified in a string with cron format
 func (gocelery *GoCelery) EnqueueInQueueWithSchedule(spec string, queueName string, taskName string, args []interface{}) error {
-	return gocelery.cron.AddFunc(spec, func() {
+	_, err := gocelery.cron.AddFunc(spec, func() {
 		log.Infof("Running scheduled task %s: %s", spec, taskName)
 		gocelery.EnqueueInQueue(queueName, taskName, args, true)
 	})
+	return err
 }
 
 // EnqueueWithSchedule adds a task that is scheduled repeatedly.
