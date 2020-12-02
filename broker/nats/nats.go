@@ -7,7 +7,7 @@ import (
 	"github.com/tatataufik/gocelery/broker"
 
 	// nats broker
-	"github.com/nats-io/nats"
+	"github.com/apcera/nats"
 )
 
 const (
