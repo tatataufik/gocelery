@@ -8,7 +8,7 @@
 			"Rev": "539d4dc034c079a7188b5d4ca9650632d73c66e8"
 		},
 		{
-			"ImportPath": "github.com/nats-io/nats.go",
+			"ImportPath": "github.com/nats-io/nats",
 			"Rev": "120703c6d80965e2f1e7a542c88dc574987b17e1"
 		},
 		{

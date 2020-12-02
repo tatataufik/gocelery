@@ -8,7 +8,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/nats-io/nats.go"
+	"github.com/nats-io/nats"
 )
 
 func usage() {
