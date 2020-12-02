@@ -10,7 +10,7 @@ import (
 	"sync"
 	"time"
 
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"github.com/gomodule/redigo/redis"
 	"github.com/tatataufik/gocelery/broker"
 	// redis broker

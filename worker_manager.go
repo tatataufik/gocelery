@@ -10,7 +10,7 @@ import (
 	"syscall"
 	"time"
 
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"github.com/go-errors/errors"
 	"github.com/tatataufik/gocelery/broker"
 	"github.com/tatataufik/gocelery/serializer"

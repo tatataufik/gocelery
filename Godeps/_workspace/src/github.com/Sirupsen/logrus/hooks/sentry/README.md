@@ -13,7 +13,7 @@ Every sentry application defined on the server gets a different
 
 ```go
 import (
-  "github.com/Sirupsen/logrus"
+  "github.com/sirupsen/logrus"
   "github.com/Sirupsen/logrus/hooks/sentry"
 )
 

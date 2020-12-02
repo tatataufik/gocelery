@@ -29,7 +29,7 @@ import (
 	"math/rand"
 	"time"
 
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"github.com/tatataufik/gocelery"
 )
 
@@ -85,7 +85,7 @@ go run demo/main.go
 package main
 
 import (
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"github.com/tatataufik/gocelery"
 )
 

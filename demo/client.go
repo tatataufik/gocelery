@@ -5,7 +5,7 @@ package main
 import (
 	"flag"
 
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 	"github.com/tatataufik/gocelery"
 )
 

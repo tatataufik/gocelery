@@ -5,7 +5,7 @@
 ```go
 import (
   "log/syslog"
-  "github.com/Sirupsen/logrus"
+  "github.com/sirupsen/logrus"
   logrus_syslog "github.com/Sirupsen/logrus/hooks/syslog"
 )
 
