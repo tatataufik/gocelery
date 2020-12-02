@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	log "github.com/sirupsen/logrus"
 	"github.com/robfig/cron"
+	log "github.com/sirupsen/logrus"
 
 	// import nats broker
 	_ "github.com/tatataufik/gocelery/broker/nats"
@@ -130,7 +130,7 @@ func (gocelery *GoCelery) Enqueue(taskName string, args []interface{}, ignoreRes
 // EnqueueInQueueWithSchedule adds a task that is scheduled repeatedly.
 // Schedule is specified in a string with cron format
 func (gocelery *GoCelery) EnqueueInQueueWithSchedule(spec string, queueName string, taskName string, args []interface{}) error {
-	_, err := gocelery.cron.AddFunc(spec, func() {
+	err := gocelery.cron.AddFunc(spec, func() {
 		log.Infof("Running scheduled task %s: %s", spec, taskName)
 		gocelery.EnqueueInQueue(queueName, taskName, args, true)
 	})
