@@ -9,7 +9,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/apcera/nats"
+	"github.com/nats-io/nats"
 )
 
 func usage() {

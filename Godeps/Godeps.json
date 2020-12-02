@@ -8,7 +8,7 @@
 			"Rev": "539d4dc034c079a7188b5d4ca9650632d73c66e8"
 		},
 		{
-			"ImportPath": "github.com/apcera/nats",
+			"ImportPath": "github.com/nats-io/nats",
 			"Comment": "v1.0.6-15-gcb61eee",
 			"Rev": "cb61eee00a57a6163bdadbd978b3aeba3293a3a9"
 		},
