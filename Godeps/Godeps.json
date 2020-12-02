@@ -9,8 +9,7 @@
 		},
 		{
 			"ImportPath": "github.com/nats-io/nats",
-			"Comment": "v1.0.6-15-gcb61eee",
-			"Rev": "cb61eee00a57a6163bdadbd978b3aeba3293a3a9"
+			"Rev": "120703c6d80965e2f1e7a542c88dc574987b17e1"
 		},
 		{
 			"ImportPath": "github.com/garyburd/redigo/internal",
